@@ -34,4 +34,12 @@ defmodule PheonixCommerce.Acceptance.ProductsTest do
     assert visible_text(price)       == "$#{product.price}"
     assert visible_text(description) == product.description
   end 
+
+  test "/products clickiing a product will open product details", %{product: product} do
+    navigate_to "/products"
+    product_li  = find_element(:css, "ul.products li")
+    link = find_within_element(product_li, :css, "a")
+    click(link)
+    assert "/products/#{product.id}" == current_path 
+  end
 end 
