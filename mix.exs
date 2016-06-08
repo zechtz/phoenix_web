@@ -1,23 +1,25 @@
-defmodule PheonixCommerce.Mixfile do
-  use Mix.Project
+defmodule PheonixCommerce.Mixfile do use Mix.Project
 
   def project do
-    [app: :pheonix_commerce,
-     version: "0.0.1",
-     elixir: "~> 1.0",
-     elixirc_paths: elixirc_paths(Mix.env),
-     compilers: [:phoenix, :gettext] ++ Mix.compilers,
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     aliases: aliases,
-     deps: deps]
+    [
+      app: :pheonix_commerce,
+      version: "0.0.1",
+      elixir: "~> 1.0",
+      elixirc_paths: elixirc_paths(Mix.env),
+      compilers: [:phoenix, :gettext] ++ Mix.compilers,
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      aliases: aliases,
+      deps: deps
+   ]
   end
 
   # Configuration for the OTP application.
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {PheonixCommerce, []},
+    [
+      mod: {PheonixCommerce, []},
       applications: applications(Mix.env)
     ]
   end
@@ -49,7 +51,7 @@ defmodule PheonixCommerce.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.9"},
       {:cowboy, "~> 1.0"},
-      {:hound, "~> 0.7.6", only: :test}
+      {:hound, "~> 1.0", only: :test}
     ]
   end
 
