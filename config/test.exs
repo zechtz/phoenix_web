@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :pheonix_commerce, PheonixCommerce.Repo,
    adapter:    Ecto.Adapters.Postgres,
    username:   "postgres",
-   password:   "postgres",
+   password:   "secret",
    database:   "pheonix_commerce_test",
    hostname:   "localhost",
    pool:       Ecto.Adapters.SQL.Sandbox

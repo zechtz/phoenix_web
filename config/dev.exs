@@ -36,7 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 config :pheonix_commerce, PheonixCommerce.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "secret",
   database: "pheonix_commerce_dev",
   hostname: "localhost",
   pool_size: 10
